@@ -7,13 +7,15 @@
         "title":"Renaissance",
         "start_year":"14th century",
         "end_year":"17th century",
-        "characteristic":["A period of cultural rebirth, marked by a focus on realism, perspective, and humanism","Showcasing the beauty of the natural world and the potential of the human mind and spirit"]
+        "characteristic":["A period of cultural rebirth, marked by a focus on realism, perspective, and humanism","Showcasing the beauty of the natural world and the potential of the human mind and spirit"],
+        "reference":"https://www.history.com/topics/renaissance/renaissance"
     },
     "period2":{
         "image_url":"https://cdn.sanity.io/images/cxgd3urn/production/655a41c02f1d5fe495a7b552d09c77f9c2d9ad6d-2182x2011.jpg?rect=0,0,2181,2011&w=640&h=590&fit=crop&auto=format",
         "title":"Impressionism",
         "start_year":"Late 1860s",
         "end_year":"early 1900s",
-        "characteristic":["Capturing fleeting moments and sensory experiences through vibrant colors, loose brushwork, and the play of light","Conveying the immediate and ever-changing nature of modern life"]
+        "characteristic":["Capturing fleeting moments and sensory experiences through vibrant colors, loose brushwork, and the play of light","Conveying the immediate and ever-changing nature of modern life"],
+        "reference":"https://www.history.com/topics/art-history/impressionism"
     }
 }

@@ -28,7 +28,8 @@ class AppInfoModal extends Component {
     const {period1, period2} = description;
     const {characteristic:characteristic1} = (period1 !== undefined? period1:{"characteristic":Array([])});
     const {characteristic:characteristic2} = (period2 !== undefined? period2:{"characteristic":Array([])});
-    console.log(characteristic2);
+    const {reference:reference1} = (period1 !== undefined? period1:{"reference":""});
+    const {reference:reference2} = (period2 !== undefined? period2:{"reference":""});
     return (
       <React.Fragment>
         <Modal show={display} onHide={this.handleChangeDisplay} centered className="modal-xl modal-description">
@@ -51,7 +52,7 @@ class AppInfoModal extends Component {
                         </div>
                         <div className="col-6 col-sm-6 col-md-3 col-lg-3 ">
                             <h3 className="d-flex justify-content-start">
-                                <span>{description.period1? description.period1.title:null} </span>
+                                <span><a href={reference1}>{description.period1? description.period1.title:null} </a></span>
                             </h3>
                             <h5>
                                 <span>({description.period1? description.period1.start_year:null} - </span>
@@ -78,7 +79,7 @@ class AppInfoModal extends Component {
                         </div>
                         <div className="col-6 col-sm-6 col-md-3 col-lg-3">
                             <h3 className="text-right">
-                                <span>{description.period2? description.period2.title:null} </span>
+                                <span><a href={reference2}>{description.period2? description.period2.title:null}</a> </span>
                             </h3>
                             <h5>
                                 <span>({description.period2? description.period2.start_year:null} - </span>
