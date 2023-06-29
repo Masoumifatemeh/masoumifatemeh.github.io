@@ -8,7 +8,7 @@ class Galley extends Component {
     const {showModal, onModalToggle, gallery} = this.props;
     return (
       <React.Fragment>
-        <Modal show={showModal} onHide={onModalToggle} centered className="modal-lg">
+        <Modal show={showModal} onHide={()=>onModalToggle(null)} centered className="modal-lg">
           <Modal.Header closeButton></Modal.Header>
           <Modal.Body>
            <div className="row">

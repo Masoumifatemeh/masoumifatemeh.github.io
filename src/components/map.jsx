@@ -33,7 +33,7 @@ class Map extends Component {
     });
   }
 
-  handleModalToggle = () => this.setState({ showModal: !this.state.showModal });
+  handleModalToggle = (idx) => this.setState({ showModal: !this.state.showModal , currentArtitstIdx:idx});
   handleMoveToNextMarker = ()=> {
     const { currentArtitstIdx, artists, markerRefs } = this.state;
     if (currentArtitstIdx === artists.length - 1){

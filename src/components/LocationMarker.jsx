@@ -56,7 +56,7 @@ class LocationMarker extends Component {
                     </div>
                     <div className="card-footer bg-white">
                       <div className="row">
-                        <button type="button" className="btn btn-light border-dark" onClick={onModalToggle}>Gallery</button>
+                        <button type="button" className="btn btn-light border-dark" onClick={()=>onModalToggle(idx)}>Gallery</button>
                       </div>
                     </div>
                   </div>
