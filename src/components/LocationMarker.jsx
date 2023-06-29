@@ -1,27 +1,25 @@
 import React, { Component } from "react";
 import { Marker, Popup } from "react-leaflet";
 import L from "leaflet";
-import marker from "../assets/img/marker.png";
-import marker_gif from "../assets/gif/marker.gif";
 
 class LocationMarker extends Component {
   
   renderLocationIcon = () => {
     return L.icon({
-      iconUrl: marker,
+      iconUrl: process.env.PUBLIC_URL + "/assets/img/marker.png",
       iconSize: [40, 40],
       popupAnchor: [-200,250]
     });
   };
   renderLocationGif = () => {
     return L.icon({
-      iconUrl: marker_gif,
+      iconUrl: process.env.PUBLIC_URL + "/assets/gif/marker.gif",
       iconSize: [40, 40],
       popupAnchor: [-200,250]
     });
   };
   render() {
-    const { artist, idx, currentArtitstIdx, markerRefs, onModalToggle} = this.props;
+    const { artist, idx, currentArtitstIdx, markerRefs, onDisplayGalley} = this.props;
     return (
       <React.Fragment>
           <Marker
@@ -56,7 +54,7 @@ class LocationMarker extends Component {
                     </div>
                     <div className="card-footer bg-white">
                       <div className="row">
-                        <button type="button" className="btn btn-light border-dark" onClick={()=>onModalToggle(idx)}>Gallery</button>
+                        <button type="button" className="btn btn-light border-dark" onClick={()=>onDisplayGalley(idx)}>Gallery</button>
                       </div>
                     </div>
                   </div>

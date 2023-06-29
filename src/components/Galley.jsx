@@ -5,10 +5,10 @@ import { Modal, Button } from "react-bootstrap";
 class Galley extends Component {
   state = {  };
   render() {
-    const {showModal, onModalToggle, gallery} = this.props;
+    const {displayGalley, onDisplayGalley, gallery} = this.props;
     return (
       <React.Fragment>
-        <Modal show={showModal} onHide={()=>onModalToggle(null)} centered className="modal-lg">
+        <Modal show={displayGalley} onHide={()=>onDisplayGalley(null)} centered className="modal-lg">
           <Modal.Header closeButton></Modal.Header>
           <Modal.Body>
            <div className="row">
@@ -18,15 +18,15 @@ class Galley extends Component {
                 </div>
                 <div className="card-body">
                   <div className="lightbox">
-                    <div className="row">
+                    <div className="row d-flex align-items-center justify-content-center">
                     {gallery.map((img_data,idx) => (
-                        <div className="col-12 col-sm-12 col-md-4 col-lg-4"  key={`div-${idx}`}>
+                        <div className="col-12 col-sm-12 col-md-4 col-lg-4 d-flex align-items-center justify-content-center"  key={`div-${idx}`}>
                           <figure className="figure">
                             <img key={`img-${idx}`}
                                   src={img_data.url}
                                   alt={img_data.title}
                                   className="figure-img img-fluid rounded"></img>
-                            <figcaption className="font-weight-bold">
+                            <figcaption className="font-weight-bold d-flex align-items-center justify-content-center">
                                 <div>
                                   <span id="title" className="text-center text-dark">{img_data.title} ({img_data.year})</span>
                                 </div>
@@ -42,7 +42,7 @@ class Galley extends Component {
            </div>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={onModalToggle}>
+            <Button variant="secondary" onClick={()=>onDisplayGalley(null)}>
               Close
             </Button>
           </Modal.Footer>

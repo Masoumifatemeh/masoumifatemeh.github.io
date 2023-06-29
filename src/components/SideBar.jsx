@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import play from "../assets/svg/play.svg";
-
 class SideBar extends Component {
   render() {
     const {onMoveToNextMarker} = this.props;
@@ -14,7 +12,7 @@ class SideBar extends Component {
                 className="btn btn-sm rounded"
               >
                 <img
-                  src={play}
+                  src={process.env.PUBLIC_URL + "/assets/svg/play.svg"}
                   width={25}
                   height={25}
                   alt=""

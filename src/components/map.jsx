@@ -3,7 +3,6 @@ import { MapContainer, TileLayer, useMap} from 'react-leaflet'
 import LocationMarker from "./LocationMarker";
 import Galley from "./Galley";
 import SideBar from "./SideBar";
-import { getArtists } from "../services/loadData";
 
 const RecenterAutomatically = ({lat,lng, mapZoom}) => {
     const map = useMap();
@@ -17,15 +16,26 @@ class Map extends Component {
   
   state = {
     mapCenterPosition: { lat: 39.74943382936186, lng: -44.45068187691437 },
-    mapZoom: .5,
+    mapZoom: 0.5,
     currentArtitstIdx: null,
+    artistIdx:null,
     artists: [],
-    showModal: false,
+    displayGalley: false,
     markerRefs:[],
   };
 
-  componentDidMount() {
-    const artists = getArtists();
+  getData = async () => {
+    const data = await fetch(process.env.PUBLIC_URL + "/services/data.json")
+                  .then((response) => {
+                    return response.json();
+                  }).then((data)=>{
+                    return data;
+                  });
+    return data;
+  }
+
+  async componentDidMount(){
+    const artists = await this.getData();
     this.setState({
       artists: artists,
       mapZoom:2.5,
@@ -33,7 +43,8 @@ class Map extends Component {
     });
   }
 
-  handleModalToggle = (idx) => this.setState({ showModal: !this.state.showModal , currentArtitstIdx:idx});
+  handleDisplayGallery = (idx) => this.setState({ displayGalley: !this.state.displayGalley , artistIdx:idx});
+  
   handleMoveToNextMarker = ()=> {
     const { currentArtitstIdx, artists, markerRefs } = this.state;
     if (currentArtitstIdx === artists.length - 1){
@@ -41,21 +52,21 @@ class Map extends Component {
       this.setState({currentArtitstIdx:null,
                      mapCenterPosition: { lat: 39.74943382936186, lng: -44.45068187691437 },
                      mapZoom:2,
-                     showModal:false })
+                     displayGalley:false })
     }
     else if (currentArtitstIdx === null) {
       markerRefs[0].openPopup();
       this.setState({currentArtitstIdx:0,
                      mapCenterPosition:artists[0].location,
                      mapZoom:7,
-                     showModal:false })
+                     displayGalley:false })
     }
     else{
       markerRefs[currentArtitstIdx + 1].openPopup();
       this.setState({currentArtitstIdx:currentArtitstIdx + 1 ,
                      mapCenterPosition:artists[currentArtitstIdx + 1].location,
                      mapZoom:7,
-                     showModal:false })
+                     displayGalley:false })
     }
     }
   render() {
@@ -63,9 +74,10 @@ class Map extends Component {
       mapCenterPosition,
       mapZoom,  
       artists,
-      showModal,
+      displayGalley,
       currentArtitstIdx,
       markerRefs,
+      artistIdx,
     } = this.state;
     return (
       <React.Fragment>
@@ -95,14 +107,15 @@ class Map extends Component {
                         idx={idx}
                         currentArtitstIdx={currentArtitstIdx}
                         markerRefs={markerRefs}
-                        onModalToggle={this.handleModalToggle}
+                        onDisplayGalley={this.handleDisplayGallery}
                         />
                   ))}
                 
                 <Galley 
-                    showModal={showModal}
-                    onModalToggle={this.handleModalToggle}
-                    gallery={(currentArtitstIdx !== null) ? artists[currentArtitstIdx].gallery:[]}
+                    displayGalley={displayGalley}
+                    onDisplayGalley={this.handleDisplayGallery}
+                    gallery={(artistIdx !== undefined && artistIdx !== null ) ? 
+                              artists[artistIdx].gallery: []}
                 />
               <RecenterAutomatically lat={mapCenterPosition.lat} lng={mapCenterPosition.lng} mapZoom={mapZoom} /> 
             </MapContainer>
