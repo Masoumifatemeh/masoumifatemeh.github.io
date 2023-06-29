@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { MapContainer, TileLayer, useMap} from 'react-leaflet'
 import LocationMarker from "./LocationMarker";
+import AppInfoModal from "./AppInfoModal";
 import Galley from "./Galley";
 import SideBar from "./SideBar";
 
@@ -118,6 +119,7 @@ class Map extends Component {
                               artists[artistIdx].gallery: []}
                 />
               <RecenterAutomatically lat={mapCenterPosition.lat} lng={mapCenterPosition.lng} mapZoom={mapZoom} /> 
+              <AppInfoModal></AppInfoModal>
             </MapContainer>
             
           </div>

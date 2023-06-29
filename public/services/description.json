@@ -1,0 +1,19 @@
+{
+    "app_name":"Unveiling Herstory: Women Painters Through the Ages",
+    "course":"Digital Humanities, Theory & Practice",
+    "date":"Summer 2023",
+    "period1":{
+        "image_url":"https://cdn.sanity.io/images/cxgd3urn/production/6926bb97820db0b13a84fd88f0f56776f70474c3-1200x929.jpg?rect=0,0,1200,928&w=640&h=495&fit=crop&auto=format",
+        "title":"Renaissance",
+        "start_year":"14th century",
+        "end_year":"17th century",
+        "characteristic":["A period of cultural rebirth, marked by a focus on realism, perspective, and humanism","Showcasing the beauty of the natural world and the potential of the human mind and spirit"]
+    },
+    "period2":{
+        "image_url":"https://cdn.sanity.io/images/cxgd3urn/production/655a41c02f1d5fe495a7b552d09c77f9c2d9ad6d-2182x2011.jpg?rect=0,0,2181,2011&w=640&h=590&fit=crop&auto=format",
+        "title":"Impressionism",
+        "start_year":"Late 1860s",
+        "end_year":"early 1900s",
+        "characteristic":["Capturing fleeting moments and sensory experiences through vibrant colors, loose brushwork, and the play of light","Conveying the immediate and ever-changing nature of modern life"]
+    }
+}

@@ -7,9 +7,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
   overflow: hidden;
+  font-family: TimesNewRoman,Times New Roman,Times,Baskerville,Georgia,serif; 
+
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: TimesNewRoman,Times New Roman,Times,Baskerville,Georgia,serif; 
+}
+
+.leaflet-popup-content-wrapper {
+  font-family: TimesNewRoman,Times New Roman,Times,Baskerville,Georgia,serif; 
+  font-size: medium;
 }
