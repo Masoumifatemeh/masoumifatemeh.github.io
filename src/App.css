@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
+
+.leaflet-container {
+  width: 100%;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.leaflet-custom-div-icon {
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.bg-fern-green {
+  background-color: #4d784e;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.bg-oxley {
+  background-color: #6ea171;
 }
 
-.App-link {
-  color: #61dafb;
+.bg-khaki {
+  background-color: #e1d798;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bg-quincy {
+  background-color: #675645;
 }
+
+.bg-outer-space {
+  background-color: #424756;
+}
+
+.text-fern-green {
+  color: #4d784e;
+}
+
+.text-oxley {
+  color: #6ea171;
+}
+
+.text-khaki {
+  color: #e1d798;
+}
+
+.text-quincy {
+  color: #675645;
+}
+
+.text-outer-space {
+  color: #424756;
+}
+
+.border-fern-green {
+  outline: 1px solid #4d784e;
+}
+
+.border-oxley {
+  outline: 1px solid #6ea171;
+}
+
+.border-khaki {
+  outline: 1px solid #e1d798;
+}
+
+.border-quincy {
+  outline: 1px solid #675645;
+}
+
+.border-outer-space {
+  outline: 1px solid #424756;
+}
+
+.leaflet-popup {
+
+  display: flex !important;
+}
+
+.btn-sage
+ {
+     color: #fff;
+     border-color: #898121; 
+     background-color: #898121;
+ }
+ .btn-sage:hover
+ {
+     color: #fff;
+     border-color: #4C4B16; 
+     background-color: #4C4B16;
+ }
+
+.text-sage{
+  color: #898121;
+}
+.text-dark-green{
+  color: #4C4B16;
+} 
