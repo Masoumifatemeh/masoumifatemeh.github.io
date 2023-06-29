@@ -23,7 +23,7 @@ class Galley extends Component {
                         <div className="col-12 col-sm-12 col-md-4 col-lg-4 d-flex align-items-center justify-content-center"  key={`div-${idx}`}>
                           <figure className="figure">
                             <img key={`img-${idx}`}
-                                  src={img_data.url}
+                                  src={process.env.PUBLIC_URL + img_data.url}
                                   alt={img_data.title}
                                   className="figure-img img-fluid rounded"></img>
                             <figcaption className="font-weight-bold d-flex align-items-center justify-content-center">

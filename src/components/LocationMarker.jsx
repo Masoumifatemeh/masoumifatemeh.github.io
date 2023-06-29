@@ -37,7 +37,7 @@ class LocationMarker extends Component {
                   <div className="card-body">
                     <div className="row text-center">
                     <figure className="figure w-70">
-                    <img src={artist.artist_image} 
+                    <img src={process.env.PUBLIC_URL + artist.artist_image} 
                         className="figure-img img-fluid rounded"
                         alt=""></img>
                       <figcaption className="font-weight-bold">
