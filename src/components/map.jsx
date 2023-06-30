@@ -22,6 +22,7 @@ class Map extends Component {
     artistIdx:null,
     artists: [],
     displayGalley: false,
+    displayDescriptionModal: true,
     markerRefs:[],
   };
 
@@ -45,7 +46,9 @@ class Map extends Component {
   }
 
   handleDisplayGallery = (idx) => this.setState({ displayGalley: !this.state.displayGalley , artistIdx:idx});
-  
+  handleDisplayDescriptionModal = ()=>{
+    this.setState({displayDescriptionModal:!this.state.displayDescriptionModal});
+}
   handleMoveToNextMarker = ()=> {
     const { currentArtitstIdx, artists, markerRefs } = this.state;
     if (currentArtitstIdx === artists.length - 1){
@@ -79,12 +82,16 @@ class Map extends Component {
       currentArtitstIdx,
       markerRefs,
       artistIdx,
+      displayDescriptionModal,
     } = this.state;
     return (
       <React.Fragment>
         <div className="row" key={"row"}>
           <div className="col position-absolute" style={{ zIndex: 1000, direction:"rtl" }} key="sidebar">
-            <SideBar onMoveToNextMarker={this.handleMoveToNextMarker}/>
+            <SideBar 
+            onMoveToNextMarker={this.handleMoveToNextMarker}
+            onToggleDescriptionModal = {this.handleDisplayDescriptionModal}
+            />
           </div>
           <div className="col" key="map">
             <MapContainer
@@ -119,7 +126,10 @@ class Map extends Component {
                               artists[artistIdx].gallery: []}
                 />
               <RecenterAutomatically lat={mapCenterPosition.lat} lng={mapCenterPosition.lng} mapZoom={mapZoom} /> 
-              <AppInfoModal></AppInfoModal>
+              <AppInfoModal 
+                displayDescriptionModal = {displayDescriptionModal}
+                onToggleDescriptionModal = {this.handleDisplayDescriptionModal}
+              />
             </MapContainer>
             
           </div>

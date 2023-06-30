@@ -3,7 +3,7 @@ import { Modal } from "react-bootstrap";
 
 
 class AppInfoModal extends Component {
-    state = {description:{}, display:true}
+    state = {description:{}}
     getData = async () => {
         const data = await fetch(process.env.PUBLIC_URL + "/services/description.json")
                     .then((response) => {
@@ -19,12 +19,9 @@ class AppInfoModal extends Component {
         this.setState({description: description});
     }
 
-    handleChangeDisplay = ()=>{
-        this.setState({display:false});
-    }
-
   render() {
-    const {display, description} = this.state;
+    const {displayDescriptionModal, onToggleDescriptionModal} = this.props;
+    const {description} = this.state;
     const {period1, period2} = description;
     const {characteristic:characteristic1} = (period1 !== undefined? period1:{"characteristic":Array([])});
     const {characteristic:characteristic2} = (period2 !== undefined? period2:{"characteristic":Array([])});
@@ -32,7 +29,7 @@ class AppInfoModal extends Component {
     const {reference:reference2} = (period2 !== undefined? period2:{"reference":""});
     return (
       <React.Fragment>
-        <Modal show={display} onHide={this.handleChangeDisplay} centered className="modal-xl modal-description">
+        <Modal show={displayDescriptionModal} onHide={onToggleDescriptionModal} centered className="modal-xl modal-description">
           <Modal.Header closeButton>
           {description.course} ({description.date})
           </Modal.Header>
