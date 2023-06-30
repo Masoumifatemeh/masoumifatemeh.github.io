@@ -8,14 +8,14 @@ class LocationMarker extends Component {
     return L.icon({
       iconUrl: process.env.PUBLIC_URL + "/assets/img/marker.png",
       iconSize: [40, 40],
-      popupAnchor: [-200,250]
+      popupAnchor: [-200,300]
     });
   };
   renderLocationGif = () => {
     return L.icon({
       iconUrl: process.env.PUBLIC_URL + "/assets/gif/marker.gif",
       iconSize: [40, 40],
-      popupAnchor: [-200,250]
+      popupAnchor: [-200,300]
     });
   };
   render() {
