@@ -44,8 +44,9 @@ class AppInfoModal extends Component {
                         <div className="col-12 col-sm-12 col-md-12 col-lg-3 d-flex align-items-center justify-content-center">
                             <img 
                             className="figure-img img-fluid rounded"
-                            src={description.period1? description.period1.image_url:null} 
-                            width="230" alt="" />
+                            alt={period1? period1.title:null}
+                            src={period1? period1.image_url:null} 
+                            width="230"/>
                         </div>
                         <div className="col-12 col-sm-12 col-md-12 col-lg-3">
                             <h3 className="d-flex justify-content-center">
@@ -71,8 +72,9 @@ class AppInfoModal extends Component {
                         <div className="col-12 col-sm-12 col-md-12 col-lg-3 d-flex align-items-center justify-content-center">
                         <img 
                             className="figure-img img-fluid rounded"
-                            src={description.period2? description.period2.image_url:null} 
-                            width="230" alt="" />
+                            alt={period2? period2.title:null}
+                            src={period2? period2.image_url:null} 
+                            width="230" />
                         </div>
                         <div className="col-12 col-sm-12 col-md-12 col-lg-3">
                             <h3 className="d-flex justify-content-center">

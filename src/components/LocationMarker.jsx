@@ -39,7 +39,7 @@ class LocationMarker extends Component {
                     <figure className="figure w-70">
                     <img src={process.env.PUBLIC_URL + artist.artist_image} 
                         className="figure-img img-fluid rounded"
-                        alt=""></img>
+                        alt={artist.artist_name + `(${artist.birth_date} -` +  ` ${artist.death_date})`}></img>
                       <figcaption className="font-weight-bold">
                           <div>
                            <span className="font-weight-bold text-primary"><i className="fa fa-map-marker mx-1" aria-hidden="true"></i>Country: </span>

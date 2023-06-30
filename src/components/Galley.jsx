@@ -24,7 +24,7 @@ class Galley extends Component {
                           <figure className="figure">
                             <img key={`img-${idx}`}
                                   src={process.env.PUBLIC_URL + img_data.url}
-                                  alt={img_data.title}
+                                  alt={img_data.title + img_data.year}
                                   className="figure-img img-fluid rounded"></img>
                             <figcaption className="font-weight-bold d-flex align-items-center justify-content-center">
                                 <div>
