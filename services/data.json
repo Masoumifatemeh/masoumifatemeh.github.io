@@ -1,0 +1,176 @@
+[
+  {
+      "artist_name": "Sofonisba Anguissola",
+      "birth_date": "1532",
+      "death_date": "1625",
+      "artist_image": "/assets/img/artists/SofonisbaAnguissola/profile.jpg",
+      "movements_and_styles": " Mannerism, Baroque",
+      "country": "Cremona, Italy",
+      "location": {
+          "lat": 45.13464381321369,
+          "lng": 10.02088814348366
+      },
+      "gallery": [
+          {
+              "title": "The Chess Game",
+              "year": "1555",
+              "url": "/assets/img/artists/SofonisbaAnguissola/gallery/1.jpg"
+          },
+          {
+              "title": "Portrait of Caterina Micaela of Spain",
+              "year": "1579",
+              "url": "/assets/img/artists/SofonisbaAnguissola/gallery/2.jpg"
+          },
+          {
+              "title": "Self-portrait aged 78",
+              "year": "1610",
+              "url": "/assets/img/artists/SofonisbaAnguissola/gallery/3.jpg"
+          }
+      ]
+  },
+  {
+      "artist_name": "Lavinia Fontana",
+      "birth_date": "1552",
+      "death_date": "1614",
+      "artist_image": "/assets/img/artists/LaviniaFontana/profile.jpg",
+      "movements_and_styles": "Mannerism, High Renaissance",
+      "country": "Bologna, Italy",
+      "location": {
+          "lat": 44.49714741424757,
+          "lng": 11.334772038862711
+      },
+      "gallery": [
+          {
+              "title": "Self-Portrait at the Spinet",
+              "year": "1577",
+              "url": "/assets/img/artists/LaviniaFontana/gallery/1.jpg"
+          },
+          {
+              "title": "Holy Family with Saints Margaret and Francis",
+              "year": "1578",
+              "url": "/assets/img/artists/LaviniaFontana/gallery/2.jpg"
+          },
+          {
+              "title": "Portrait of a Noblewoman",
+              "year": "1580",
+              "url": "/assets/img/artists/LaviniaFontana/gallery/3.jpg"
+          }
+      ]
+  },
+  {
+      "artist_name": "Artemisia Gentileschi",
+      "birth_date": "1593",
+      "death_date": "1656",
+      "artist_image": "/assets/img/artists/ArtemisiaGentileschi/profile.jpg",
+      "movements_and_styles": "Baroque",
+      "country": "Rome, Italy",
+      "location": {
+          "lat": 41.871105573038385,
+          "lng": 12.498905024271146
+      },
+      "gallery": [
+          {
+              "title": "Susanna and the Elders",
+              "year": "1610",
+              "url": "/assets/img/artists/ArtemisiaGentileschi/gallery/1.jpg"
+          },
+          {
+              "title": "Danae",
+              "year": "1612",
+              "url": "/assets/img/artists/ArtemisiaGentileschi/gallery/2.jpg"
+          },
+          {
+              "title": "Judith Slaying Holofernes",
+              "year": "1620",
+              "url": "/assets/img/artists/ArtemisiaGentileschi/gallery/3.jpg"
+          }
+      ]
+  },
+  {
+      "artist_name": "Mary Cassatt",
+      "birth_date": "1844",
+      "death_date": "1926",
+      "artist_image": "/assets/img/artists/MaryCassatt/profile.jpg",
+      "movements_and_styles": "Impressionism, Proto-Feminist",
+      "country": "Pennsylvania, United States",
+      "location": {
+          "lat": 41.086839843715694,
+          "lng": -78.41009139954274
+      },
+      "gallery": [
+          {
+              "title": "Little Girl in Blue Armchair",
+              "year": "1878",
+              "url": "/assets/img/artists/MaryCassatt/gallery/1.jpg"
+          },
+          {
+              "title": "The Letter",
+              "year": "1891",
+              "url": "/assets/img/artists/MaryCassatt/gallery/2.jpg"
+          },
+          {
+              "title": "Mother and Child",
+              "year": "1905",
+              "url": "/assets/img/artists/MaryCassatt/gallery/3.jpg"
+          }
+      ]
+  },
+  {
+      "artist_name": "Berthe Morisot",
+      "birth_date": "1841",
+      "death_date": "1895",
+      "artist_image": "/assets/img/artists/BertheMorisot/profile.jpg",
+      "movements_and_styles": "Impressionism",
+      "country": "Bourges, France",
+      "location": {
+          "lat": 47.08127869976202,
+          "lng": 2.3921148814253166
+      },
+      "gallery": [
+          {
+              "title": "View of Paris from the Trocadero",
+              "year": "1871",
+              "url": "/assets/img/artists/BertheMorisot/gallery/1.jpg"
+          },
+          {
+              "title": "Young Girl in a Ball Gown",
+              "year": "1879",
+              "url": "/assets/img/artists/BertheMorisot/gallery/2.jpg"
+          },
+          {
+              "title": "Reclining Nude Shepherdess",
+              "year": "1891",
+              "url": "/assets/img/artists/BertheMorisot/gallery/3.jpg"
+          }
+      ]
+  },
+  {
+      "artist_name": "Eva Gonzal\u00e8s",
+      "birth_date": "1849",
+      "death_date": "1883",
+      "artist_image": "/assets/img/artists/EvaGonzales/profile.jpg",
+      "movements_and_styles": "Impressionism",
+      "country": "Paris, France",
+      "location": {
+          "lat": 48.8486599617734,
+          "lng": 2.324029279102883
+      },
+      "gallery": [
+          {
+              "title": "A Loge at the Th\u00e9\u00e2tre des Italiens",
+              "year": "1874",
+              "url": "/assets/img/artists/EvaGonzales/gallery/1.jpg"
+          },
+          {
+              "title": "Awakening Woman",
+              "year": "1878",
+              "url": "/assets/img/artists/EvaGonzales/gallery/2.jpg"
+          },
+          {
+              "title": "Le D\u00e9jeuner sur l'herbe (Luncheon on the Grass)",
+              "year": "1882",
+              "url": "/assets/img/artists/EvaGonzales/gallery/3.jpg"
+          }
+      ]
+  }
+]
