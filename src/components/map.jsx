@@ -83,7 +83,7 @@ class Map extends Component {
     return (
       <React.Fragment>
         <div className="row" key={"row"}>
-          <div className="col position-absolute" style={{ zIndex: 5000, direction:"rtl" }} key="sidebar">
+          <div className="col position-absolute" style={{ zIndex: 1000, direction:"rtl" }} key="sidebar">
             <SideBar onMoveToNextMarker={this.handleMoveToNextMarker}/>
           </div>
           <div className="col" key="map">

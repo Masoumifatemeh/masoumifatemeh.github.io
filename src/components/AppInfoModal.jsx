@@ -37,29 +37,29 @@ class AppInfoModal extends Component {
           {description.course} ({description.date})
           </Modal.Header>
           <Modal.Body>
-           <div className="row">
+           <div className="row ">
             <div className="card">
                 <div className="card-header text-center bg-white">
                 <h2 className="text-center">{description.app_name}</h2>
                 </div>
                 <div className="card-body">
-                    <div className="row d-flex align-items-center">
-                        <div className="col-6 col-sm-6 col-md-3 col-lg-3 d-flex justify-content-start">
+                    <div className="row d-flex align-items-center justify-content-center">
+                        <div className="col-12 col-sm-12 col-md-12 col-lg-3 d-flex align-items-center justify-content-center">
                             <img 
                             className="figure-img img-fluid rounded"
                             src={description.period1? description.period1.image_url:null} 
                             width="230" alt="" />
                         </div>
-                        <div className="col-6 col-sm-6 col-md-3 col-lg-3 ">
-                            <h3 className="d-flex justify-content-start">
+                        <div className="col-12 col-sm-12 col-md-12 col-lg-3">
+                            <h3 className="d-flex justify-content-center">
                                 <span><a href={reference1}>{description.period1? description.period1.title:null} </a></span>
                             </h3>
-                            <h5>
+                            <h5 className="d-flex justify-content-center">
                                 <span>({description.period1? description.period1.start_year:null} - </span>
                                 <span>{description.period1? description.period1.end_year:null})</span>
                             </h5>
                         </div>
-                        <div className="col-6 col-sm-6 col-md-6 col-lg-6">
+                        <div className="col-12 col-sm-12 col-md-12 col-lg-6 d-flex align-items-center justify-content-center">
                             <h5 className="text-right">
                                 <ul>
                                     {characteristic1.map((item)=>{
@@ -71,22 +71,22 @@ class AppInfoModal extends Component {
                         </div>
                     </div>
                     <div className="row d-flex align-items-center">
-                        <div className="col-6 col-sm-6 col-md-3 col-lg-3 d-flex justify-content-start">
+                        <div className="col-12 col-sm-12 col-md-12 col-lg-3 d-flex align-items-center justify-content-center">
                         <img 
-                            className="figure-img img-fluid rounded "
+                            className="figure-img img-fluid rounded"
                             src={description.period2? description.period2.image_url:null} 
                             width="230" alt="" />
                         </div>
-                        <div className="col-6 col-sm-6 col-md-3 col-lg-3">
-                            <h3 className="text-right">
+                        <div className="col-12 col-sm-12 col-md-12 col-lg-3">
+                            <h3 className="d-flex justify-content-center">
                                 <span><a href={reference2}>{description.period2? description.period2.title:null}</a> </span>
                             </h3>
-                            <h5>
+                            <h5 className="d-flex justify-content-center">
                                 <span>({description.period2? description.period2.start_year:null} - </span>
                                 <span>{description.period2? description.period2.end_year:null})</span>
                             </h5>
                         </div>
-                        <div className="col-6 col-sm-6 col-md-5 col-lg-5">
+                        <div className="col-12 col-sm-12 col-md-12 col-lg-6 d-flex align-items-center justify-content-center">
                             <h5 className="text-right">
                                 <ul>
                                     {characteristic2.map((item)=>{
